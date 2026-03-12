@@ -1,0 +1,49 @@
+# Source
+src/
+test/
+tests/
+__tests__/
+coverage/
+
+# Build tooling
+tsconfig*.json
+tsup.config.*
+turbo.json
+
+# Lint / format
+.eslintrc*
+.prettierrc*
+.prettierignore
+eslint.config.*
+.editorconfig
+
+# Monorepo / workspace
+.pnpm-store/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+packages/
+apps/
+
+# Changesets
+.changeset/
+.changeset/**
+
+# Dev / CI
+.github/
+.vscode/
+.idea/
+.husky/
+.npmrc
+.env*
+*.log
+
+# Docs (optional – remove if you want them published)
+docs/
+examples/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+
+.npmrc

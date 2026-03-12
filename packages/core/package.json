@@ -1,0 +1,142 @@
+{
+  "name": "@voice-kit/core",
+  "version": "0.2.14",
+  "description": "Core STT, TTS, audio, codecs, VAD, transports for @voice-kit",
+  "type": "module",
+  "author": {
+    "name": "Paprflare"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.30.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./agents": {
+      "types": "./dist/agents/index.d.ts",
+      "import": "./dist/agents/index.js",
+      "require": "./dist/agents/index.cjs"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js",
+      "require": "./dist/react/index.cjs"
+    },
+    "./telephony": {
+      "types": "./dist/telephony/index.d.ts",
+      "import": "./dist/telephony/index.js",
+      "require": "./dist/telephony/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.58",
+    "@ai-sdk/google": "^3.0.43",
+    "@ai-sdk/groq": "^3.0.29",
+    "@ai-sdk/openai": "^0.0.55",
+    "@aws-sdk/client-s3": "^3.1005.0",
+    "@cartesia/cartesia-js": "^3.0.0",
+    "@deepgram/sdk": "^5.0.0",
+    "@elevenlabs/elevenlabs-js": "^2.38.1",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@google-cloud/speech": "^7.3.0",
+    "@livekit/protocol": "^1.45.0",
+    "@livekit/rtc-node": "^0.13.24",
+    "@mastra/core": "^1.10.0",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.213.0",
+    "@opentelemetry/resources": "^2.6.0",
+    "@opentelemetry/sdk-node": "^0.213.0",
+    "@opentelemetry/sdk-trace-base": "^2.6.0",
+    "@opentelemetry/sdk-trace-node": "^2.6.0",
+    "@opentelemetry/semantic-conventions": "^1.40.0",
+    "@ricky0123/vad-web": "^0.0.30",
+    "ahooks": "^3.9.6",
+    "ai": "^6.0.116",
+    "alawmulaw": "^6.0.0",
+    "assemblyai": "^4.26.1",
+    "audiobuffer-to-wav": "^1.0.0",
+    "axios": "^1.13.6",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "drachtio-client": "^0.1.4",
+    "drachtio-fsmrf": "^4.1.2",
+    "g711": "^1.0.1",
+    "groq": "^5.13.0",
+    "i18next": "^25.8.14",
+    "immer": "^11.1.4",
+    "inngest": "^3.52.6",
+    "libphonenumber-js": "^1.12.38",
+    "litellm": "^0.12.0",
+    "livekit-server-sdk": "^2.15.0",
+    "lru-cache": "^11.2.6",
+    "mastra": "^0.1.0",
+    "mic": "^2.1.2",
+    "microsoft-cognitiveservices-speech-sdk": "^1.48.0",
+    "mitt": "^3.0.1",
+    "nanoid": "^5.0.7",
+    "node-record-lpcm16": "^1.0.1",
+    "openai": "^6.27.0",
+    "opusscript": "^0.1.1",
+    "p-any": "^4.0.0",
+    "p-limit": "^7.3.0",
+    "p-queue": "^9.1.0",
+    "p-retry": "^7.1.1",
+    "p-timeout": "^7.0.1",
+    "pino": "^10.3.1",
+    "plivo": "^4.75.7",
+    "rxjs": "^7.8.1",
+    "sarvamai": "^1.1.4",
+    "sip.js": "^0.21.2",
+    "telnyx": "^6.3.0",
+    "tiktoken": "^1.0.22",
+    "twilio": "^5.12.2",
+    "uuid": "^13.0.0",
+    "winston": "^3.19.0",
+    "ws": "^8.19.0",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.28",
+    "@types/node": "^20.19.37",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/ws": "^8.18.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^1.6.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
